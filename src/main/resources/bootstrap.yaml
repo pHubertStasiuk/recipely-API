@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: recipely
+  cloud:
+    vault:
+      host: ${VAULT_HOST}
+      port: ${VAULT_PORT}
+      scheme: http
+      authentication: TOKEN
+      token: ${VAULT_TOKEN}
+      kv:
+        enabled: true
+      generic:
+        backend: secret/recipely
+        enabled: false
+
